@@ -33,7 +33,7 @@ body {
   color: hsl(193, 38%, 86%);
 }
 .adviceID {
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 0.25em;
   color: hsl(290, 100%, 66%);
   text-transform: capitalize;
@@ -46,9 +46,7 @@ body {
   height: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  background: url("./images/pattern-divider-desktop.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  border-top: solid 0.25rem hsl(290, 100%, 66%);
 }
 
 #factButton {
@@ -59,31 +57,38 @@ body {
 button {
   height: auto;
   width: 6rem;
-  border: 0.5rem solid black;
-
+  border: 0.5rem solid hsl(217, 19%, 24%);
   border-radius: 100%;
   padding: 0.25rem;
   position: absolute;
   top: 90%;
   transition: 0.2s;
+  color: hsl(217, 19%, 24%);
+  background-color: hsl(193, 38%, 86%);
 }
 
 button:hover {
   cursor: pointer;
   box-shadow: 0px 0px 30px 1px hsl(290, 100%, 66%);
-  color: white;
-  border-color: white;
-  background-color: black;
+  color: hsl(193, 38%, 86%);
+  border-color: hsl(193, 38%, 86%);
+  background-color: hsl(217, 19%, 24%);
 }
 
 @media (max-width: 600px) {
+  body {
+    font-size: 22px;
+  }
   .card {
     max-height: 40vh;
     max-width: 65vw;
   }
-  .adviceBorder {
-    background: url("./images/pattern-divider-mobile.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+}
+
+@media (max-width: 900px) {
+  .card {
+    min-height: 40vh;
+    max-height: 50vh;
+    max-width: 70vw;
   }
 }
