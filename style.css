@@ -65,14 +65,17 @@ button {
   transition: 0.2s;
   color: hsl(217, 19%, 24%);
   background-color: hsl(193, 38%, 86%);
+  outline: none;
 }
 
-button:hover {
-  cursor: pointer;
-  box-shadow: 0px 0px 30px 1px hsl(290, 100%, 66%);
-  color: hsl(193, 38%, 86%);
-  border-color: hsl(193, 38%, 86%);
-  background-color: hsl(217, 19%, 24%);
+@media (min-width: 900px) {
+  button:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 30px 1px hsl(290, 100%, 66%);
+    color: hsl(193, 38%, 86%);
+    border-color: hsl(193, 38%, 86%);
+    background-color: hsl(217, 19%, 24%);
+  }
 }
 
 @media (max-width: 600px) {
@@ -89,6 +92,12 @@ button:hover {
   .card {
     min-height: 40vh;
     max-height: 50vh;
-    max-width: 70vw;
+    max-width: 65vw;
+  }
+  button:active {
+    box-shadow: 0px 0px 30px 1px hsl(290, 100%, 66%);
+    color: hsl(193, 38%, 86%);
+    border-color: hsl(193, 38%, 86%);
+    background-color: hsl(217, 19%, 24%);
   }
 }
